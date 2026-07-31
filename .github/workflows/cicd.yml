@@ -1,0 +1,27 @@
+---
+name: hello workflow
+on:
+  workflow_dispatch: null
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the code 
+        run: echo "checkout code"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build the code 
+        run: echo "build container image"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the code 
+        run: echo "test the code"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy the code 
+        run: echo "deploy the code"
+      - name: say hello to users
+        run: echo "hello snehal"
