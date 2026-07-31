@@ -12,8 +12,9 @@ jobs:
         run: echo "hello snehal"
       - name: say hello to username
         run: echo "hello $USER"
-details:
-  runs-on: ubuntu-latest
-  steps:
-    - name: shoe versions
-      run: docker --version && python --version
+        
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: shoe versions
+        run: docker --version && python --version
