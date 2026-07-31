@@ -1,7 +1,17 @@
 ---
-name: environment dependent workflow
+name: environment dependent workflow final
 on:
-  workflow_dispatch: null
+  workflow_dispatch: 
+    inputs:
+      environment:
+        description: this is the env value where this workflow run
+        default: 'dev'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
 jobs:
   code:
     runs-on: ubuntu-latest
